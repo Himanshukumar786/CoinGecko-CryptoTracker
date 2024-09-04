@@ -1,13 +1,11 @@
-
 import './App.css'
+import CoinTable from './components/CoinTable/CoinTable';
 
 function App() {
   return(
-    <div>
-      <h1 className="flex justify-center items-center my-4">
-        Hello
-      </h1>
-    </div>
+    <>
+      <CoinTable/>
+    </>
   )
 }
 
