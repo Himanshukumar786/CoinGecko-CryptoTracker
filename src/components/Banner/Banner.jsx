@@ -18,7 +18,7 @@ function Banner(){
                     </div>
 
                     <div className="font-semibold text-sm text-white text-center">
-                        Get all info regarding cryptocurrencies
+                        Get all info regarding crypto-currencies
                     </div>
 
                 </div>
