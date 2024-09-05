@@ -1,11 +1,12 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { fetchCoinData } from "../../services/fetchCoinData";
 import { useQuery } from "react-query";
-import { CurrencyContext } from "../../context/CurrencyContext";
+// import { CurrencyContext } from "../../context/CurrencyContext";
+import currencyStore from "../../state/store";
 
 function CoinTable( ) {
 
-    const { currency } = useContext(CurrencyContext);
+    const { currency } = currencyStore();
 
     const [page, setPage] = useState(1);
     const { data, isLoading, isError, error} = useQuery(['coins', page, currency], () => fetchCoinData(page, currency), {
@@ -27,7 +28,7 @@ function CoinTable( ) {
             <div className="w-full bg-yellow-400 text-black flex py-4 px-2 font-semibold items-center justify-center">
                 {/* Header of the table */}
                 <div className="basis-[35%]">
-                    Coin 
+                    <span className="m-4">Coin</span> 
                 </div>
                 <div  className="basis-[25%]">
                     Price 
