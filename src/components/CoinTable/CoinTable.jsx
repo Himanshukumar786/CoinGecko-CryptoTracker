@@ -3,6 +3,7 @@ import { fetchCoinData } from "../../services/fetchCoinData";
 import { useQuery } from "react-query";
 import currencyStore from "../../state/store";
 import { useNavigate } from "react-router-dom";
+import PageLoader from "../PageLoader/PageLoader";
 
 // Memoized Coin Row Component to avoid re-rendering
 const CoinRow = memo(({ coin, handleCoinRedirect }) => {
@@ -54,8 +55,11 @@ function CoinTable() {
     const handleNextPage = () => setPage((prev) => prev + 1);
     const handlePrevPage = () => setPage((prev) => Math.max(prev - 1, 1));
 
-    if (isLoading) return <div>Loading...</div>;
+    // if (isLoading) return <div>Loading...</div>;
     if (isError) return <div>Error: {error.message}</div>;
+    if(isLoading) {
+        return <PageLoader />
+    }
 
     return (
         <div className="my-5 flex flex-col items-center justify-center gap-5 w-[90vw] md:w-[80vw] mx-auto">
