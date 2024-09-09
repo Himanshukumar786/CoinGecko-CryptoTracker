@@ -14,7 +14,7 @@ const CoinRow = memo(({ coin, handleCoinRedirect }) => {
         >
             <div className="flex items-center justify-start gap-3 basis-full sm:basis-1/2 md:basis-[35%]">
                 <div className="w-[3rem] h-[3rem] md:w-[5rem] md:h-[5rem]">
-                    <img src={coin.image} alt={`${coin.name} logo`} className="w-full h-full" />
+                    <img src={coin.image}  className="w-full h-full" loading="lazy" />
                 </div>
                 <div className="flex flex-col">
                     <div className="text-lg md:text-3xl">{coin.name}</div>
@@ -79,7 +79,7 @@ function CoinTable() {
             </div>
 
             <div className="flex flex-col w-full mx-auto">
-                {data.map((coin) => (
+                {data && data.map((coin) => (
                     <CoinRow key={coin.id} coin={coin} handleCoinRedirect={handleCoinRedirect} />
                 ))}
             </div>
