@@ -2,7 +2,7 @@ import CoinInfo from "./CoinInfo";
 
 function CoinInfoContainer(){
 
-    const { data: historiData,}
+    // const { data: historiData,}
 
     return(
         <>
