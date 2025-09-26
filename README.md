@@ -1,7 +1,70 @@
+# 🚀 CoinGecko Crypto Tracker
+
 <div align="center">
-    <img height="100px" src="data:image/png;base64,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"/>
+    <img height="100px" src="data:image/png;base64,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"/>
     <h1>Crypto Tracker</h1>
+    <p><strong>A modern, responsive cryptocurrency tracking application built with React, Vite, and the CoinGecko API</strong></p>
+    
+   <a href="https://coingecko-cryptotracker.vercel.app/">🚀 Live Demo</a>
 </div>
+
+## 📋 Table of Contents
+- [🎯 Overview](#-overview)
+- [✨ Features](#-features)  
+- [🛠️ Technology Stack](#️-technology-stack)
+- [🏗️ Project Architecture](#️-project-architecture)
+- [🔌 API Integration](#-api-integration)
+- [🎨 Design System](#-design-system)
+- [🚀 Performance Optimizations](#-performance-optimizations)
+- [📱 Responsive Design](#-responsive-design)
+- [🔧 Installation & Setup](#-installation--setup)
+- [📊 Key Features Deep Dive](#-key-features-deep-dive)
+- [🔮 Future Enhancements](#-future-enhancements)
+
+## 🎯 Overview
+
+CoinGecko Crypto Tracker is a comprehensive cryptocurrency monitoring application that provides real-time market data, interactive price charts, and detailed coin information. Built with modern React patterns and best practices, it offers an intuitive interface for tracking cryptocurrency investments and market trends.
+
+### 🌟 **Key Highlights**
+- **Real-time Data**: Live cryptocurrency prices and market data
+- **Interactive Charts**: Historical price visualization with Chart.js
+- **Multi-Currency Support**: INR and USD currency options
+- **Responsive Design**: Optimized for all device sizes
+- **Performance Optimized**: React Query caching and code splitting
+- **Error Resilient**: Comprehensive error handling and boundaries
+
+## ✨ Features
+
+### 🏠 **Home Page**
+- **Hero Banner**: Eye-catching project branding with animated background
+- **Cryptocurrency Table**: 
+  - Displays top 100+ cryptocurrencies
+  - Real-time prices, 24h changes, market cap
+  - Lazy-loaded coin images for performance
+  - Click-to-navigate coin details
+- **Smart Pagination**: Navigate through cryptocurrency data efficiently
+- **Responsive Grid**: Adapts seamlessly across device sizes
+
+### 📊 **Coin Details Page**
+- **Comprehensive Coin Information**:
+  - High-resolution coin imagery
+  - Rich HTML descriptions with safe parsing
+  - Market rank and current pricing
+  - Real-time data updates
+- **Interactive Price Charts**:
+  - Multiple timeframes (24h, 7d, 30d, 90d, 365d)
+  - Automatic interval optimization
+  - Responsive chart scaling
+  - Smooth animations and transitions
+
+### 🌐 **Global Features**
+- **Multi-Currency Support**: Seamless INR/USD switching
+- **Smart Navigation**: Breadcrumb-style navigation
+- **Loading States**: Skeleton loaders maintain UX continuity
+- **Error Recovery**: User-friendly error messages with retry options
+
+<img width="1432" alt="Screenshot 2024-08-18 at 12 55 35 PM" src="https://github.com/user-attachments/assets/e5142715-b9b7-45a4-97b2-552b16ca4664">
+<img width="960" alt="Screenshot 2024-09-11 192512" src="https://github.com/user-attachments/assets/381e8245-c758-4ba4-8ee0-5093bf51b57b">
 
 The Cryptocurrency Tracker App is a robust, user-friendly application built with React.js. It allows users to monitor real-time cryptocurrency data, including prices, market caps, and more, using the CoinGecko API. The app offers a comprehensive view of various cryptocurrencies, making it an ideal tool for both casual users and serious investors.
 
